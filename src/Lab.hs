@@ -23,10 +23,10 @@ class Semigroup a where
     (<>) :: a -> a -> a 
 
 instance Semigroup Int where 
-    (<>) = undefined 
+    (<>) x y = x + y
 
 instance Semigroup [a] where 
-    (<>) = undefined 
+    (<>) xs ys = xs ++ ys
 
 --------------------------------------------------------------------------------
 -- Monoids
@@ -40,10 +40,10 @@ class Semigroup a => Monoid a where
     mempty :: a
 
 instance Monoid Int where
-    mempty  = undefined
+    mempty = 0
 
 instance Monoid [a] where
-    mempty  = undefined
+    mempty  = []
 
 --------------------------------------------------------------------------------
 
